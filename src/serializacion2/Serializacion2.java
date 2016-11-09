@@ -17,7 +17,6 @@ public class Serializacion2 {
         Product p1 = new Product("p1","parafusos",3.0);
         Product p2 = new Product("p2","cravos",4.0);
         Product p3 = new Product("p3","tachas",5.0);
-        Product nulo = new Product();
         Product px = new Product();
         
         ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream("serial.txt"));
