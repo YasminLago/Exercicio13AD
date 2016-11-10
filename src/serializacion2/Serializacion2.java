@@ -25,15 +25,13 @@ public class Serializacion2 {
         escribir.writeObject(p1);
         escribir.writeObject(p2);
         escribir.writeObject(p3);
+        escribir.writeObject(null);
         escribir.close();
-        
-        try{
-        while (leer.available()==0){
-            px = (Product) leer.readObject();    
+ 
+        while ((px = (Product) leer.readObject())!=null){
             System.out.println(px);
         }
-        }catch (IOException io){}
-        
-    }
+    leer.close();}
+     
 }
 
